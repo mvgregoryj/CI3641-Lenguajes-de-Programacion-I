@@ -41,6 +41,7 @@ class TablasDeMetodosVirtuales:
 
                     # Vemos los metodos de la clase hija
                     metodosClaseHija = accion[3:]
+
                 else:
                     return f"ERROR: la clase {clasePadreStr} no existe"
 
@@ -48,6 +49,13 @@ class TablasDeMetodosVirtuales:
             else:
                 clasePadreObjeto = None
                 metodosClaseHija = accion[1:]
+
+
+            #Veamos si hay metodos repetidos:
+            listTemp = [x for x in metodosClaseHija if metodosClaseHija.count(x) <= 1]
+
+            if len(listTemp) < len(metodosClaseHija):
+                return f"ERROR: todos los metodos deben llamarse diferente"
 
             # Creamos una nueva clase hija
             claseHijaObjeto = Clase(claseHija, metodosClaseHija, clasePadreObjeto)
