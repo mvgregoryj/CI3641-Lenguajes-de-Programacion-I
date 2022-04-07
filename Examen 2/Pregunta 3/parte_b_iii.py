@@ -1,24 +1,6 @@
-"""
-iii. Modifique el iterador misterio de tal forma que obtenga un nuevo iterador
-suspenso, que devolverá cada elemento de las listas generadas por misterio de
-forma aplanada.
-Por ejemplo, si al ejecutar misterio resultan generadas las listas:
-• [a, b, c]
-• [d]
-• [e, f]
-El nuevo iterador suspenso deberá generar:
-• a
-• b
-• c
-• d
-• e
-• f
-
-"""
-
 # --------------------------------------------------
 # Suspenso 1: 
-# Modificando el iterador isterio que usa el iterador ins.
+# Modificando el iterador misterio que usa el iterador ins.
 
 def ins(e, ls):
     yield [e, *ls]

@@ -5,7 +5,7 @@
 Ingrese el numero final de n: 200
 Ingrese el numero pasos desde 0 hasta 200: 10
 
-Resultados de la ejecucion:
+Resultados de la ejecución:
 --------------------------------------------------------------------------------
 n 		| Recursiva 		| Recursiva Cola 	| Iterativo
 --------------------------------------------------------------------------------
@@ -32,7 +32,7 @@ n 		| Recursiva 		| Recursiva Cola 	| Iterativo
 200 	| 325909066     	| 325909066 	    | 325909066
 
 
-Tiempos de ejecucion en segundos:
+Tiempos de ejecución en segundos:
 --------------------------------------------------------------------------------
 n 		| Recursiva 		| Recursiva Cola 	| Iterativo
 --------------------------------------------------------------------------------
@@ -65,7 +65,7 @@ n 		| Recursiva 		| Recursiva Cola 	| Iterativo
 Ingrese el numero final de n: 1000
 Ingrese el numero pasos desde 0 hasta 1000: 50
 
-Resultados de la ejecucion:
+Resultados de la ejecución:
 --------------------------------------------------------------------------------
 n 		    | Recursiva Cola 	                            | Iterativo
 --------------------------------------------------------------------------------
@@ -92,7 +92,7 @@ n 		    | Recursiva Cola 	                            | Iterativo
 1000 		| 4589846486121852471287507026774008357772574 	| 4589846486121852471287507026774008357772574
 
 
-Tiempos de ejecucion en segundos:
+Tiempos de ejecución en segundos:
 --------------------------------------------------------------------------------
 n 		    | Recursiva Cola 	| Iterativo
 --------------------------------------------------------------------------------
@@ -120,12 +120,12 @@ n 		    | Recursiva Cola 	| Iterativo
 
 
 #-------------------- Iterativo -------------------------#
-# Gráfico de los tiempos de ejecucion: Adjunto en la carpeta bajo el nombre GraficoComparacion3.png
+# Gráfico de los tiempos de ejecución: Adjunto en la carpeta bajo el nombre GraficoComparacion3.png
 
 Ingrese el numero final de n: 2000
 Ingrese el numero pasos desde 0 hasta 2000: 100
 
-Resultados de la ejecucion:
+Resultados de la ejecución:
 --------------------------------------------------------------------------------
 n 		    | Iterativo
 --------------------------------------------------------------------------------
@@ -152,7 +152,7 @@ n 		    | Iterativo
 2000 		| 27798573975196991735885955499826873142869256092853504238585147246918844002513594411538
 
 
-Tiempos de ejecucion en segundos:
+Tiempos de ejecución en segundos:
 --------------------------------------------------------------------------------
 n 		    | Iterativo
 --------------------------------------------------------------------------------
@@ -180,12 +180,10 @@ n 		    | Iterativo
 
 
 #-------------------- Conclusiones -------------------------#
-La implementacion Recursiva es menos eficiente. Se probó con un valor de n = 300 y no hubo respuesta transcurridos 10 minutos. A su vez, se observa en los resultados y en el gráfico, que es la menos eficiente en tiempo ya que para el valor de n = 200 obtuvo un tiempo de 5.62845 segundos, es un *14071.125 en el tiempo de la recursion de cola (0.00040 segundos) y *22513.8 el tiempo de la iterativa (0.00025 segundos).
+La implementación Recursiva es menos eficiente. Se probó con un valor de n = 300 y no hubo respuesta transcurridos 10 minutos. A su vez, se observa en los resultados y en el gráfico, que es la menos eficiente en tiempo ya que para el valor de n = 200 obtuvo un tiempo de 5.62845 segundos, es un *14071.125 en el tiempo de la recursión de cola (0.00040 segundos) y *22513.8 el tiempo de la iterativa (0.00025 segundos).
 
 
-La implementacion Recursiva de cola con un valor de n mayor que 1000 arroja el error: RecursionError: maximum recursion depth exceeded in comparison. Se debe a que se excedió el nivel de recursividad y por ende no se puede comprar con valores de n superiores a 1000. 
-Por los resultaos obtenidos en la comparacion con la implementacion Iterativa se puede observar que la implementacion Recursiva de cola es menos eficiente pero solo por muy poco. Para n = 500 se observa que el tiempo de la Recursion de Cola es de 0.00091 segundos y el tiempo de la Iterativa es de 0.00060 segundos. La diferencia entre los tiempos es de 0.00030 segundos, siendo el tiempo de la Recursion de Cola un *1.51667 de el tiempo de la Iterativa. Para n = 1000 se observa que el tiempo de la Recursion de Cola es de 0.00300 segundos y el tiempo de la Iterativa es de 0.00197 segundos. La diferencia entre los tiempos es de 0.00103 segundos, siendo el tiempo de la Recursion de Cola un *1.52284 de el tiempo de la Iterativa.
+La implementación Recursiva de cola con un valor de n mayor que 1000 arroja el error: RecursionError: maximum recursion depth exceeded in comparison. Se debe a que se excedió el nivel de recursividad y por ende no se puede comprar con valores de n superiores a 1000. 
+Por los resultados obtenidos en la comparación con la implementación Iterativa se puede observar que la implementación Recursiva de cola es menos eficiente pero solo por muy poco. Para n = 500 se observa que el tiempo de la Recursión de Cola es de 0.00091 segundos y el tiempo de la Iterativa es de 0.00060 segundos. La diferencia entre los tiempos es de 0.00030 segundos, siendo el tiempo de la Recursión de Cola un *1.51667 de el tiempo de la Iterativa. Para n = 1000 se observa que el tiempo de la Recursión de Cola es de 0.00300 segundos y el tiempo de la Iterativa es de 0.00197 segundos. La diferencia entre los tiempos es de 0.00103 segundos, siendo el tiempo de la Recursión de Cola un *1.52284 de el tiempo de la Iterativa.
 
-Finalmente se observa que la implementacion Iterativa en la más eficiente en tiempo alcanzando un tiempo de 0.00179 segundos para n = 2000. Y sin tener limitante para el valor de n.
-
-"""
+Finalmente se observa que la implementación Iterativa en la más eficiente en tiempo alcanzando un tiempo de 0.00179 segundos para n = 2000. Y sin tener limitante para el valor de n.

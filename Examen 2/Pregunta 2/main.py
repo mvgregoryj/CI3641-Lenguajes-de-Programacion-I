@@ -172,4 +172,4 @@ if __name__ == "__main__":
 
         resultado = procesar(accion)
 
-        print(resultado)
+        print(f"{resultado}\n")

@@ -91,73 +91,73 @@ def alphaBetaIterativo(n: int) -> int:
 
 
 #----------------- Comparando Recursion con Recursion de Cola e Iterativa -----------------#
-# if '__main__' == __name__:
+if '__main__' == __name__:
 
-#     final = int(input("Ingrese el numero final de n: "))
-#     pasos = int(input(f"Ingrese el numero pasos desde 0 hasta {final}: "))
+    final = int(input("Ingrese el numero final de n: "))
+    pasos = int(input(f"Ingrese el numero pasos desde 0 hasta {final}: "))
 
-#     # Inicializacion de variables
-#     valores = [i for i in range(0, final+pasos, pasos)]
+    # Inicializacion de variables
+    valores = [i for i in range(0, final+pasos, pasos)]
 
-#     # Arreglos de tuplas con los tiempos de ejecucion de las funciones y sus respectivos resultados
-#     resultados_recursiva = []
-#     resultados_recursiva_cola = []
-#     resultados_iterativo = []
+    # Arreglos de tuplas con los tiempos de ejecucion de las funciones y sus respectivos resultados
+    resultados_recursiva = []
+    resultados_recursiva_cola = []
+    resultados_iterativo = []
 
-#     for n in valores:
+    for n in valores:
 
-#         # Version Recursiva
-#         tiempo_inicial = time.time()
-#         resultado = alphaBetaRecursiva(n)
-#         tiempo_final = time.time()
+        # Version Recursiva
+        tiempo_inicial = time.time()
+        resultado = alphaBetaRecursiva(n)
+        tiempo_final = time.time()
 
-#         resultados_recursiva.append((resultado, tiempo_final - tiempo_inicial))
+        resultados_recursiva.append((resultado, tiempo_final - tiempo_inicial))
 
-#         # Version Recursiva de cola
-#         # Lista de los primeros 49 numeros naturales
-#         listaAB = [i for i in range(49)]
-        
-#         tiempo_inicial = time.time()
-#         resultado = alphaBetaRecursivaCola(n, listaAB)
-#         tiempo_final = time.time()
+        # Version Recursiva de cola
+        # Lista de los primeros 49 numeros naturales
+        listaAB = [i for i in range(49)]
+    
+        tiempo_inicial = time.time()
+        resultado = alphaBetaRecursivaCola(n, listaAB)
+        tiempo_final = time.time()
 
-#         resultados_recursiva_cola.append((resultado, tiempo_final - tiempo_inicial))
+        resultados_recursiva_cola.append((resultado, tiempo_final - tiempo_inicial))
 
-#         # Version Iterativa
-#         tiempo_inicial = time.time()
-#         resultado = alphaBetaIterativo(n)
-#         tiempo_final = time.time()
+        # Version Iterativa
+        tiempo_inicial = time.time()
+        resultado = alphaBetaIterativo(n)
+        tiempo_final = time.time()
 
-#         resultados_iterativo.append((resultado, tiempo_final - tiempo_inicial))
+        resultados_iterativo.append((resultado, tiempo_final - tiempo_inicial))
 
-#     # Imprimimos los resultados
-#     print(f"\nResultados de la ejecucion:")
-#     print(f"--------------------------------------------------------------------------------")
-#     print(f"n \t\t| Recursiva \t\t| Recursiva Cola \t| Iterativo")
-#     print(f"--------------------------------------------------------------------------------")
-#     for i in range(len(valores)):
-#         if resultados_recursiva[i][0] < 10000:
-#             print(f"{valores[i]} \t\t| {resultados_recursiva[i][0]} \t\t\t| {resultados_recursiva_cola[i][0]} \t\t\t| {resultados_iterativo[i][0]}")
-#         else:
-#             print(f"{valores[i]} \t\t| {resultados_recursiva[i][0]} \t\t| {resultados_recursiva_cola[i][0]} \t\t| {resultados_iterativo[i][0]}")
+    # Imprimimos los resultados
+    print(f"\nResultados de la ejecucion:")
+    print(f"--------------------------------------------------------------------------------")
+    print(f"n \t\t| Recursiva \t\t| Recursiva Cola \t| Iterativo")
+    print(f"--------------------------------------------------------------------------------")
+    for i in range(len(valores)):
+        if resultados_recursiva[i][0] < 10000:
+            print(f"{valores[i]} \t\t| {resultados_recursiva[i][0]} \t\t\t| {resultados_recursiva_cola[i][0]} \t\t\t| {resultados_iterativo[i][0]}")
+        else:
+            print(f"{valores[i]} \t\t| {resultados_recursiva[i][0]} \t\t| {resultados_recursiva_cola[i][0]} \t\t| {resultados_iterativo[i][0]}")
 
-#     print(f"\n\nTiempos de ejecucion en segundos:")
-#     print(f"--------------------------------------------------------------------------------")
-#     print(f"n \t\t| Recursiva \t\t| Recursiva Cola \t| Iterativo")
-#     print(f"--------------------------------------------------------------------------------")
-#     for i in range(len(valores)):
-#         print(f"{valores[i]} \t\t| {resultados_recursiva[i][1]:.5f} \t\t| {resultados_recursiva_cola[i][1]:.5f} \t\t| {resultados_iterativo[i][1]:.5f}")
+    print(f"\n\nTiempos de ejecucion en segundos:")
+    print(f"--------------------------------------------------------------------------------")
+    print(f"n \t\t| Recursiva \t\t| Recursiva Cola \t| Iterativo")
+    print(f"--------------------------------------------------------------------------------")
+    for i in range(len(valores)):
+        print(f"{valores[i]} \t\t| {resultados_recursiva[i][1]:.5f} \t\t| {resultados_recursiva_cola[i][1]:.5f} \t\t| {resultados_iterativo[i][1]:.5f}")
 
 
-#     # # Graficamos los resultados
-#     plt.plot(valores, [i[1] for i in resultados_recursiva], label="Recursiva")
-#     plt.plot(valores, [i[1] for i in resultados_recursiva_cola], label="Recursiva Cola")
-#     plt.plot(valores, [i[1] for i in resultados_iterativo], label="Iterativo")
-#     plt.xlabel("Valor de n")
-#     plt.ylabel("Segundos")
-#     plt.title("Tiempos de resultados de la ejecucion")
-#     plt.legend()
-#     plt.show()
+    # Graficamos los resultados
+    plt.plot(valores, [i[1] for i in resultados_recursiva], label="Recursiva")
+    plt.plot(valores, [i[1] for i in resultados_recursiva_cola], label="Recursiva Cola")
+    plt.plot(valores, [i[1] for i in resultados_iterativo], label="Iterativo")
+    plt.xlabel("Valor de n")
+    plt.ylabel("Segundos")
+    plt.title("Tiempos de resultados de la ejecucion")
+    plt.legend()
+    plt.show()
 
 
 #----------------- Comparando Recursion de Cola e Iterativa -----------------#
@@ -220,47 +220,47 @@ def alphaBetaIterativo(n: int) -> int:
 
 
 #----------------- Iterativa -----------------#
-if '__main__' == __name__:
+# if '__main__' == __name__:
 
-    final = int(input("Ingrese el numero final de n: "))
-    pasos = int(input(f"Ingrese el numero pasos desde 0 hasta {final}: "))
+#     final = int(input("Ingrese el numero final de n: "))
+#     pasos = int(input(f"Ingrese el numero pasos desde 0 hasta {final}: "))
 
-    # Inicializacion de variables
-    valores = [i for i in range(0, final+pasos, pasos)]
+#     # Inicializacion de variables
+#     valores = [i for i in range(0, final+pasos, pasos)]
 
-    # Arreglos de tuplas con los tiempos de ejecucion de las funciones y sus respectivos resultados
-    resultados_recursiva_cola = []
-    resultados_iterativo = []
+#     # Arreglos de tuplas con los tiempos de ejecucion de las funciones y sus respectivos resultados
+#     resultados_recursiva_cola = []
+#     resultados_iterativo = []
 
-    for n in valores:
+#     for n in valores:
 
-        # Version Iterativa
-        tiempo_inicial = time.time()
-        resultado = alphaBetaIterativo(n)
-        tiempo_final = time.time()
+#         # Version Iterativa
+#         tiempo_inicial = time.time()
+#         resultado = alphaBetaIterativo(n)
+#         tiempo_final = time.time()
 
-        resultados_iterativo.append((resultado, tiempo_final - tiempo_inicial))
+#         resultados_iterativo.append((resultado, tiempo_final - tiempo_inicial))
 
-    # Imprimimos los resultados
-    print(f"\nResultados de la ejecucion:")
-    print(f"--------------------------------------------------------------------------------")
-    print(f"n \t\t| Iterativo")
-    print(f"--------------------------------------------------------------------------------")
-    for i in range(len(valores)):
-        print(f"{valores[i]} \t\t| {resultados_iterativo[i][0]}")
+#     # Imprimimos los resultados
+#     print(f"\nResultados de la ejecucion:")
+#     print(f"--------------------------------------------------------------------------------")
+#     print(f"n \t\t| Iterativo")
+#     print(f"--------------------------------------------------------------------------------")
+#     for i in range(len(valores)):
+#         print(f"{valores[i]} \t\t| {resultados_iterativo[i][0]}")
 
-    print(f"\n\nTiempos de ejecucion en segundos:")
-    print(f"--------------------------------------------------------------------------------")
-    print(f"n \t\t| Iterativo")
-    print(f"--------------------------------------------------------------------------------")
-    for i in range(len(valores)):
-        print(f"{valores[i]} \t\t| {resultados_iterativo[i][1]:.5f}")
+#     print(f"\n\nTiempos de ejecucion en segundos:")
+#     print(f"--------------------------------------------------------------------------------")
+#     print(f"n \t\t| Iterativo")
+#     print(f"--------------------------------------------------------------------------------")
+#     for i in range(len(valores)):
+#         print(f"{valores[i]} \t\t| {resultados_iterativo[i][1]:.5f}")
 
 
-    # # Graficamos los resultados
-    plt.plot(valores, [i[1] for i in resultados_iterativo], label="Iterativo")
-    plt.xlabel("Valor de n")
-    plt.ylabel("Segundos")
-    plt.title("Tiempos de resultados de la ejecucion")
-    plt.legend()
-    plt.show()
+#     # # Graficamos los resultados
+#     plt.plot(valores, [i[1] for i in resultados_iterativo], label="Iterativo")
+#     plt.xlabel("Valor de n")
+#     plt.ylabel("Segundos")
+#     plt.title("Tiempos de resultados de la ejecucion")
+#     plt.legend()
+#     plt.show()
